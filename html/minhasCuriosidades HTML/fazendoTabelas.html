@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<body>
+
+    <table border="4">
+        <caption>Tabela de produtos</caption>
+
+        <!-- <thead> define o cabeçalho da tabela -->
+        <thead>
+            <!-- </tr> define uma linha, e significa table row -->
+            <tr>
+                <!-- </th> define uma especificação de um elemento -->
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+
+            </tr>
+        </thead>
+        <!-- <tbody> define o corpo de uma tabela, onde vai estar os dados -->
+        <tbody>
+            <!-- </tr> define uma linha, e significa table row -->
+            <tr>
+                <!-- </td> define os dados de uma tabela, significa table data -->
+                <td>Ipad Pro</td>
+                <td>6499.99</td>
+                <td>15</td>
+                <td>97499,85</td>
+            </tr>
+            <tr>
+                <!-- </td> define os dados de uma tabela, significa table data -->
+                <td>Galaxy S20</td>
+                <td>6499.99</td>
+                <td>40</td>
+                <td>259999,6</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <!-- O atributo <colspan> de um <td>(table data) faz com que essa parte da tabela ocupe a quantidade de colunas que você passe, no meu caso eu passei três -->
+
+                <!-- O atributo <rowspan> de um <td>(table data) faz com que essa parte da tabela ocupe a quantidade de linhas que voce passe, no meu caso eu passei duas  -->
+                <td colspan="3" rowspan="2">Total</td>
+                <td>357499,45</td>
+            </tr>
+
+            <tr>
+                <!-- Para o <rowspan> funcionar eu tenho que adicionar mais uma linha com mais uma <td> nesse caso -->
+                <td>Teste rowspan</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

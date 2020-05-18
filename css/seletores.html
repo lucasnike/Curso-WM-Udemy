@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        label:nth-child(1){
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>
+</head>
+<!-- 
+
+    os seletores são:
+
+    * {} - Todo e qualquer elemento
+
+    div {} - Todos os elementos do mesmo
+
+    .tag {} - Todos que o valor do atributo class é tag ou o que for colocado
+
+    #someId {} - Todos que o valor do atributo id for o colocado
+
+    div > p {} - Todos os paragrafos que estão diretamente dentro de uma div, as coisas que estão dentro do p também recebem
+
+    div section {} - Todos os elementos section diretamente ou indiretamente dentro de uma div
+
+    span + p {} - Todos as tags p que vem diretamente e são irmãos adjacentes de um span
+
+    span ~ ol {} - Todos os irmãos de uma tag span dentro de uma tag pai, sendo adjacentes ou não
+
+    [feira] {} - Todos os elementos que tem o atributo feira personalizado
+    
+    [feira=casa] {} - Todos os elementos que tem o atributo feira com o valor casa
+
+    [feira=escritorio empresa] {} - Todos os elementos que tem o atributo feira com o valor escritorio empresa separados
+
+    [feira~=escritorio] {} - Todos os elementos que tem o atributo feira e com possível valor escritorio mesmo que sem o resto
+
+    [feira*=sa] {} - Todos os elementos que o tem o atributo feira com qualquer parte do seu valor contendo 'sa'
+
+    span:nth-child(1) - Todos os elementos span que são primeiro filho de algum elemento, caso eu passe 2 será o segundo filho e assim consecutivamente
+
+    div > :nth-child(odd) - Aplica a todos os filhos ímpares de algum elemento como div no exemplo
+
+ -->
+<body>
+    <div class='tag nolabel'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
+

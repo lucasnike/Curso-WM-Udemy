@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+
+        /* A altura e a largura são aplicadas para o display: block; caso seja inline a altura e largura não serão aplicadas, então caso eu queira ter dois ou mais elementos na mesma linha com a aplicação do css que eu coloquei eu tenho que colocar um display: inline-block; assim os elementos ficaram na mesma linha e a altura e largura serão aplicado normalmente, porém para o inline-block funcionar eu não posso ter nehum espaço entre as tags então ou eu coloco um ao lado do outro ou eu coloco um comentário como eu fiz nesse exemplo */
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-size: 40px;
+            height: 100%;
+            background-color: coral;
+            margin: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%;
+            height: 250px;
+            height: 50%;
+            display: inline-block;
+            /* Pra o inline-block fazer efeito não pode haver nenhum espaço em branco entre os elementos */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div><!--
+    --><span>Subtítulo</span>
+</body>
+
+</html>

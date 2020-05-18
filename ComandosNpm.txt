@@ -1,0 +1,11 @@
+npm i algumaCoisa = Usado para instalar algum pacote
+
+npm i = Quando usamos o npm i sem nada depois ele instala as dependências do projeto que estavam especificadas no arquivo package.json, caso não haja mais a pasta node_modules
+
+npm init = Inicia um projeto criando o arquivo package.json, fazendo muitas perguntas
+
+npm init -y = Inicia um projeto criando o arquivo package.json, respondendo sim para todas as perguntas
+
+npm i --save-dev axios@0.17.1 -E = Instala colocando a dependência na área de desenvolvedor, que significa que só será necessária em desenvolvimento, depois vem o ( axios@0.17.1 ) que diz qual é o pacote a ser instalado arroba e a versão a ser instalada e a flag -E diz que vai ser exatamente aquela versão e que não haverá updates
+
+0.17.1 = As versões dos pacotes funcionam da seguinte maneira: tem o primeiro indice 0 (major), tem o segundo indice 17 (minor), e o terceiro 1 (fix), e quando antes de especificar a versão no arquivo package.json coloca-se um circunflexo( ^ ) quer dizer que só o minor pode ser atualizado, por exemplo "^0.17.1", e quando temos um til ( ~ ) quer dizer que só o fix pode ser atualizado por exemplo "~0.17.1", e quando não temos nenhum desses sinais quer dizer que nada pode ser atualizado

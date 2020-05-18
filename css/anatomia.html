@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            color: #ffffff;
+            font-size: 50px;
+            text-align: center;
+            border: solid 5px navy; /* ShortHand Prorperty */
+            font-family: Helvetica, sans-serif; /* Na font-family a virgula significa alternancia, caso não tenha o primeiro elemento ele pula pro seguinte */
+            width: calc(100% - 100px);
+            background-color: rgb(14, 169, 216);
+            transition: 0.8s;
+        }
+        /* Usando uma pseudo-classe, exemplo: hover */
+        .selector:hover {
+            background-color: orangered;
+            transition: 0.8s;
+        }
+
+        /* Usando pseudo-elementos, exemplo: first-letter */
+        .selector::first-letter {
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        /* Padrões de nomenclatira
+            Dash-case ou CamelCase */
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+.cidade {
+    width: 513px;
+    height: 342px;
+    background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+#slider img {
+    width: 513px;
+    position: absolute;
+    opacity: 0;
+
+    /* transition: opacity 800ms; */
+    transform: translate(200px 150px) rotate(50deg)
+}
+
+body {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    width: 513px;
+}
+
+#slider .selected {
+    opacity: 1;
+}
+

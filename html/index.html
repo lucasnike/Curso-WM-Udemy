@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <header id="cabecalhoPrincipal">
+        <h1 style="text-align: center;">
+            HTML
+        </h1>
+    
+        <nav> 
+            <a href wm-nav="exercicios/funcionou.html" class="link">000 - Teste</a> |
+            <a href class="link" wm-nav="exercicios/texto1.html">001 - Texto 1</a> |
+            <a href class="link" wm-nav="exercicios/texto2.html">002 - Texto 2</a> |
+            <a href class="link" wm-nav="exercicios/listas.html">003 - Listas 1</a> | <br> <br>
+            <a href class="link" wm-nav="exercicios/listaAninhada.html">004 - Listas Aninhadas</a> |
+            <a href class="link" wm-nav="exercicios/links.html">005 - Links</a> |
+            <a href class="link" wm-nav="exercicios/tabelas.html">006 - Tabelas</a> | <br><br>
+            <a href class="link" wm-nav="exercicios/form/form.html">007 - Forms</a> |
+            <a href class="link" wm-nav="exercicios/imagens.html">008 - Imagens</a> |
+            <a href class="link" wm-nav="exercicios/videos.html">009 - Vídeos</a> |
+            <a href class="link" wm-nav="exercicios/tagsNaoVisuais.html">010 - Tags não visuais</a>
+        </nav>
+    </header>
+
+    <section id="conteudo"></section>
+
+    <footer>
+        Curso Web Moderno - Lucas Vinicius
+    </footer>
+
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            /*
+            *A propiedade on click recebe uma função que recebe um evento como parâmetro (e)
+                que é o evento daquele elemento recebido
+            */
+            const conteudo = document.getElementById('conteudo') // Pega um elemento pelo atributo id
+            link.onclick = e => { 
+            e.preventDefault() // Previni que o evento padrão aconteça
+
+            fetch(link.getAttribute('wm-nav'))
+                .then(res => res.text())
+                .then(htmlText => conteudo.innerHTML = htmlText)
+            }
+        })
+    </script>
+</body>
+</html>

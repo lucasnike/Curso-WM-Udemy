@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Funcao",
+            "request": "launch",
+            "mainClass": "Funcao"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+
+#conteudo{
+    padding: 30px 0;
+}
+
+body {
+    font-family: Ubuntu;
+}
+
+footer {
+    background-color: rgb(32, 216, 124);
+    color: aliceblue;
+    padding: 10px 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+#cabecalhoPrincipal {
+    background-color: rgb(136, 83, 206);
+    padding: 20px 0;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+.link {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+nav {
+    background-color: rgb(38, 10, 54);
+    padding: 40px 10px;
+    width: 50;
+    text-align: center;
+}

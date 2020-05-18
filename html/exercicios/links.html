@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            a {
+                color: darkseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Links</h1>
+
+        <h2>URL absoluta</h2>
+
+        <!-- URL absoluta -->
+
+        <a id="inicio"  href="https://www.google.com.br">Google nesta aba</a> <br>
+        <!-- O atributo target="_self" ou target="_blank" diz onde o link da página vai abrir, self abre na aba atual e blank numa página em branco-->
+
+        <!-- Em URLs absolutas o http ou https são required -->
+        <a href="https://www.google.com.br" target="_blank">Google em outra aba</a>
+        <h2>URL relativa</h2>
+        <!-- URL relativa -->
+
+        <br><a href="index.html">Diretório Atual</a><br>
+        <a href="../index.html">Diretório anterior</a><br>
+        <a href="./index.html">Diretório atual</a><br>
+        <h2>URL relativa à raiz</h2>
+        <!-- URL relativa à raiz -->
+
+        <a href="/index.html" >Diretório raiz</a> 
+
+        <h2>Link para email</h2>
+        
+        <!-- Link para email -->
+
+
+        <!-- Quando passamos o mailto(href="mailto:email@email.com") no href="" ele abre o gerenciador de emails para mandar uma mensagem para o email que eu coloquei depois do mailto: -->
+        <a href="mailto:lucas5cristal@gmail.com" >Entre em contato</a>
+
+        <!-- Para criar tags com id ou class mais rapidamente no VScode é só digitar para id (nomeDaTag#nomeId) usando a cerquilha entre os nomes e, para class(nomeDaTag.nomeClass) usando o ponto entre os nomes -->
+
+        <!-- Crio uma div que fica em baixo da página pra depois criar link que desce pra visualizar ela -->
+        <div id="noticia" style="position: absolute;top: 2000px;">
+            <h1>Notícia Buemba</h1>
+            <p>Nada demais aconteceu deixe de ser curioso</p>
+            <a href="#inicio">Ir para inicio</a>
+        </div>
+        <h2>Link pra outro elemento da página </h2>
+        <br> <a href="#noticia">Veja a noticia lá em baixo</a>
+    </body>
+</html>

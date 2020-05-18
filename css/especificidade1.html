@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        /* 
+            Especificidades:
+
+                1. regra com !important
+                2. seletores mais específicos
+                3. ultima regra processada (caso de empate)
+
+            Especificidade do mdn mozzila:
+
+                Seletores Universais
+                Tipo de Seletores
+                Classes seletoras
+                Atributos Seletores
+                Pseudo-classes
+                Seletores ID
+                Estilo Inline
+         */
+
+        *{
+            background-color: black;
+        }
+
+        p {
+            background-color: #aaa;
+        }
+
+        .observacao {
+            background-color: #5f5;
+            border: dashed 5px;
+            padding: 20px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        p.observacao {
+            padding: 10px;
+            background: linear-gradient(to right, red, yellow);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

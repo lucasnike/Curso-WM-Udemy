@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: aliceblue;
+            background-color: coral;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+        span {
+            background-color: dodgerblue;
+        }
+        li {
+            background-color: purple;
+        }
+
+        div, span, li {
+            width: 50%; /*Ignorado por elementos inline*/
+            width: 200px;/*Ignorado por elementos inline*/
+            height: 80px;/*Ignorado por elementos inline*/
+            padding-top: 30px ;/*Aceita elementos inline*/ 
+            text-align: center;
+            display: block;
+            display: inline; /*Um elemento com display: inline; não aceita modificação nem da largura nem da altura, então pra que essas modificações sejam feitas e todo o conteudo fique na mesma linha eu devo colocar display: inline-block*/
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

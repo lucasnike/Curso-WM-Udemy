@@ -1,0 +1,57 @@
+<html lang="pt-br">
+
+<body>
+    <h1>Formulário</h1>
+
+    <form action="http://localhost:3003/usuarios" method="POST">
+        <!-- As tags input não tem fechamento
+        placeholder é o nome que fica dentro do espaço do input indicando o que tem que ser colocado -->
+
+        <!-- Caso eu não coloque o atributo name na tag input o body-parser não vai adicionar o valor do input pois a tag name é equivalente a uma chave de um objeto-->
+        <input type="hidden" name="id" value="3">
+        <input type="text" name="nome" placeholder="nome" >
+        <input type="password" name="senha" placeholder="senha"> 
+        <textarea name="bio" cols="23" rows="10">Digite sua biografia</textarea>
+
+        <div>
+            <input type="radio" name="tipo" value="admin"> Admin
+            <input type="radio" name="tipo" value="regular"> Regular
+            <input type="radio" name="tipo" value="professor"> Professor
+        </div>
+
+        <div>
+            <input type="checkbox" name='ativo' value="true"> Ativo
+        </div>
+
+        <select name="sexo">
+            <option value="">Sexo</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Indefinido">Prefiro não dizer</option>
+        </select>
+
+        <select name="tecnologias" multiple size="5">
+            <option value="c#">C#</option>
+            <option value="java">Java</option>
+            <option value="js">JavaScript</option>
+            <option value="go">go</option>
+            <option value="dart">Dart</option>
+        </select>
+
+        <button formaction="http://localhost:3003/usuarios">Adicionar</button>
+        <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+    </form>
+
+    <style>
+        input, select{
+            margin-bottom: 7px;
+            font-family: Ubuntu;
+            display: block;
+        }
+        input[type=radio], input[type=checkbox]{
+            display: inline;
+        }
+        
+    </style>
+</body>
+</html>

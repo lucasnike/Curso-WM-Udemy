@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+div{
+    display: inline-block;
+    background-color: #999999;
+    text-align: center;
+}
+div:nth-child(odd){
+    background-color: aliceblue;
+}
+img {
+    height: 50px;
+    margin-top: 20px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio listas aninhadas</title>
+        <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+    </head>
+    <body>
+        
+        <h3>Projeto</h3>
+        
+        <ul class="tree">
+            <li>
+                <span wm-folder>Backend</span>
+
+                <ul>
+                    <li>
+                        <span wm-folder>app</span>
+
+                        <ul>
+                            <li>Produto.js</li>
+                            <li>Usuário.js</li>
+                            <li>Venda.js</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span wm-folder>config</span>
+
+                        <ul>
+                            <li>Banco.js</li>
+                            <li>Rotas.js</li>
+                            <li>Servidor.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder=>Frontend</span>
+
+                <ul>
+                    <li>
+                        <span wm-folder>public</span>
+
+                        <ul>
+                            <li>App.css</li>
+                            <li>App.js</li>
+                            <li>index.html</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <script>
+            document.querySelectorAll('[wm-folder]').forEach(folder => {
+                folder.onclick = function (e) {
+                    const ul = folder.nextElementSibling // Pega o próximo elemento
+                    const d = ul.style.display 
+
+                    ul.style.display = d === 'none' ? 'block' : 'none'
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: aliceblue;
+        }
+    </style>
+    <!-- rel significa tipo de relação que no caso é folha de estilo, esse atributo é obrigatório para o estilo ser aplicado -->
+    <link rel="stylesheet" href="css/externo.css">
+
+    <!-- O preferência do css é por ordem de processamento, no caso o que vier por último será o aplicado -->
+</head>
+
+<body>
+    <!-- O css inline tem a maior preferência -->
+    <h1 style="background-color: blue;">E agora?</h1>
+</body>
+
+</html>
